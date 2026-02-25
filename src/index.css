@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-surface text-foreground antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(16, 185, 129, 0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.14), transparent 55%);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+.eco-hero-glow {
+  background-image:
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.22), transparent 60%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.18), transparent 60%);
+}
+
+.eco-fade-in {
+  animation: eco-fade-in 600ms ease-out;
+}
+
+@keyframes eco-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
